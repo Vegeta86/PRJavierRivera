@@ -1,0 +1,143 @@
+.search-bar {
+  width: 80%;
+  max-width: 300px;
+  height: 50px;
+  background-color: white;
+  border-radius: 4px;
+  margin-top: 4px;
+  position: fixed;
+  top: 84px;
+  z-index: 1000;
+}
+
+.char-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  padding-top: 62px;
+}
+
+.mat-card {
+  width: 300px !important;
+  padding-left: 0%;
+  padding-right: 0%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  min-height: 442px;
+}
+
+.mat-card-header {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  .mat-card-header-text {
+    margin: 0px 0px !important;
+  }
+}
+
+.card-title {
+  max-width: 220px;
+  white-space: normal;
+  word-wrap: break-word;
+  height: 40px;
+}
+
+.mat-card-content {
+  width: 80% !important;
+  margin-top: 12px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  p{
+    height: 40px;
+  }
+}
+
+.status {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.example-header-image {
+  background-image: url("https://rickandmortyapi.com/icons/icon-144x144.png?v=1538abef51e33ef514e8fe1ab9aeab4e");
+  background-size: cover;
+}
+
+.mat-card-actions {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.mat-button {
+  margin-bottom: 4px;
+}
+
+.mat-card-image {
+  width: 220px !important;
+  margin: 0px 0px !important;
+  border-radius: 50%;
+  border-style: solid;
+  box-shadow: 0px 10px 8px #88888869;
+}
+
+.mat-raised-button {
+  margin: 0px 0px !important;
+  margin-bottom: 4px !important;
+}
+.status-dot-ok {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: greenyellow;
+  border-style: solid;
+  border-width: 0.5px;
+  margin-left: 8px;
+}
+
+.status-dot-ko {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: red;
+  border-style: solid;
+  border-width: 0.5px;
+  margin-left: 8px;
+}
+
+.status-dot-unknown {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: yellow;
+  border-style: solid;
+  border-width: 0.5px;
+  margin-left: 8px;
+}
+
+@media (min-width: 320px) {
+}
+
+@media (min-width: 1024px) {
+}
+

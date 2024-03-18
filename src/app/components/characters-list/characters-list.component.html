@@ -1,0 +1,27 @@
+<div class="char-container">
+    
+    <mat-form-field class="search-bar" appearance="fill">
+        <mat-label>Buscar Entidad</mat-label>
+        <input matInput placeholder="Morty" [(ngModel)]="searchTerm">
+    </mat-form-field>
+
+    <mat-card class="mat-card" *ngFor="let char of filteredCharacters">
+        <mat-card-header>
+            <mat-card-title class="card-title">{{char.name}}</mat-card-title>
+            <mat-card-subtitle>{{char.species}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{char.image}}" class="mat-card-image">
+        <mat-card-content>
+            <p>{{char.origin.name | truncateOrigin | titlecase}}</p>
+            <div class="status">Status: {{char.status | titlecase}}
+                <div
+                    [ngClass]="{'status-dot-ok': char.status == 'Alive', 'status-dot-ko': char.status == 'Dead', 'status-dot-unknown': char.status == 'unknown'}">
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="openDialogUp(char)">Editar</button>
+            <button mat-raised-button color="warn" (click)="delete(char)">Eliminar</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
