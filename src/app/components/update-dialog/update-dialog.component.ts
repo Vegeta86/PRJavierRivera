@@ -4,11 +4,11 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CrudService } from 'src/app/services/crud.service';
 
 @Component({
-  selector: 'app-dialog',
-  templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.css']
+  selector: 'update-dialog-dialog',
+  templateUrl: './update-dialog.component.html',
+  styleUrls: ['./update-dialog.component.css']
 })
-export class DialogComponent implements OnInit {
+export class UpdateDialogComponent implements OnInit {
 
   statusList: string[] = ['Alive', 'Dead', 'Unknown'];
   form: FormGroup;

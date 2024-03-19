@@ -1,0 +1,72 @@
+.mat-card{
+    margin-bottom: 4px;
+    border-width: 0.5px;
+    border-style: solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header {
+    height: 22px;
+    margin-left: 10%;
+    width: 80%;
+    background-color: #3f314d;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 4px;
+    font-size: 22px;
+    font-weight: 900;
+}
+.mat-card-image {
+    margin-top: 8px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    width: 90px;
+    margin: 0px 0px;
+    box-shadow: 0px 10px 8px #88888869;
+
+}
+
+.cord-a{
+    width: 60px;
+    height: 12px;
+    background-color: orange;
+    border-radius: 12px;
+    margin-bottom: 4px;
+}
+
+.cord-b{
+    width: 60px;
+    height: 12px;
+    background-color: greenyellow;
+    border-radius: 12px;
+}
+
+.cord-cont{
+    float: right;
+}
+
+
+@media (min-width: 320px) {
+    .edit-form{
+        width: 200px;
+        .mat-form-field{
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .edit-form{
+        width: 400px;
+        .mat-form-field{
+            width: 100%;
+        }
+    }
+}
+

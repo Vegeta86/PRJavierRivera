@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Resp, Result } from 'src/app/interfaces/GetCharactersResponse';
 import { CrudService } from 'src/app/services/crud.service';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogComponent } from '../dialog/dialog.component';
-import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
+import { UpdateDialogComponent } from '../update-dialog/update-dialog.component';
+import { DeleteDialogComponent } from '../delete-dialog/delete-dialog.component';
 
 
 @Component({
@@ -15,11 +15,19 @@ export class CharactersListComponent implements OnInit {
 
   public charactersList: Result[] = [];
   searchTerm: string = '';
+  @Input() refresh: boolean = false;
+
 
   constructor(private service: CrudService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getdata();
+  }
+
+  ngOnChanges() {    
+    if (this.refresh) {
+      this.getDataFromLocalStorage();      
+    }
   }
 
   getdata() {
@@ -43,7 +51,7 @@ export class CharactersListComponent implements OnInit {
   }
 
   openDialogUp(char: Result) {
-    const dialogRef = this.dialog.open(DialogComponent, {
+    const dialogRef = this.dialog.open(UpdateDialogComponent, {
       data: char
     });
     dialogRef.afterClosed().subscribe(result => {
@@ -52,7 +60,7 @@ export class CharactersListComponent implements OnInit {
   }
 
   delete(char: Result) {
-    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+    const dialogRef = this.dialog.open(DeleteDialogComponent, {
       data: char
     });
     dialogRef.afterClosed().subscribe(result => {

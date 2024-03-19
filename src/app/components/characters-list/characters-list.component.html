@@ -12,7 +12,7 @@
         </mat-card-header>
         <img mat-card-image src="{{char.image}}" class="mat-card-image">
         <mat-card-content>
-            <p>{{char.origin.name | truncateOrigin | titlecase}}</p>
+            <p>{{char.origin!.name | truncateOrigin | titlecase}}</p>
             <div class="status">Status: {{char.status | titlecase}}
                 <div
                     [ngClass]="{'status-dot-ok': char.status == 'Alive', 'status-dot-ko': char.status == 'Dead', 'status-dot-unknown': char.status == 'unknown'}">
